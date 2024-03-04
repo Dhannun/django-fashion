@@ -1,0 +1,56 @@
+{% extends 'alabrarAdmin/base.html' %}
+{% load static %}
+{% load mathfilters %}
+{% block content%}
+
+    {% include 'alabrarAdmin/partials/_navbar.html' %}
+    <div class="container-fluid page-body-wrapper">
+        {% include 'alabrarAdmin/partials/_sidebar.html' %}
+        <div class="main-panel">        
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title">List of Expenditure</h4>
+                            <p class="card-description">
+                              
+                            </p>
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>S/N</th>
+                                    <th>Item</th>
+                                    <th>Amount Collected</th>
+                                    <th>Reciever</th>
+                                   
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                {% for expense in items_expenses %}
+                                  <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{expense.item}}</td>
+                                    <td>{{expense.amount}}</td>
+                                    <td>{{expense.recieved_by}}</td>
+                                    
+                                    
+
+                                  </tr>
+                                {% endfor %}
+     
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'alabrarAdmin/partials/_footer.html' %}
+
+{% endblock content%}

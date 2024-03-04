@@ -1,0 +1,103 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'admin-home' %}">
+        <i class="mdi mdi-grid-large menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item nav-category">Customers</li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <i class="menu-icon mdi mdi-account-outline"></i>
+        <span class="menu-title">Manage Customers</span>
+        <i class="menu-arrow"></i> 
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'add-customer' %}">Add New Customer</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'customer-list' %}">Edit/Update Customer Info</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'add-measurement' %}">Add Measurement</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'edit-measurement' %}">Edit Measurement</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item nav-category">Jobs</li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+        <i class="menu-icon mdi mdi-rowing"></i>
+        <span class="menu-title">Manage Jobs</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="form-elements">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{% url 'create-job' %}">Create a Job</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'view-jobs' %}">View Jobs</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item nav-category">Admin</li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+        <i class="menu-icon mdi mdi-worker"></i>
+        <span class="menu-title">Staff</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'create-staff' %}"> Add Staff </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'staff-list' %}"> Staff List </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'create-staff-activity' %}"> Staff Activity </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'pay-staff' %}"> Staff Payment </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'activity-list' %}"> Staff Activity List </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'wages-list' %}"> Staff Payment List </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'create-work-type' %}"> Work Type </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'work-type-list' %}"> Work Type List</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#auth1" aria-expanded="false" aria-controls="auth">
+        <i class="menu-icon mdi mdi-content-cut"></i>
+        <span class="menu-title">Consumables</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth1">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'add-consumable' %}"> Add Item </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'items-list' %}"> Item List </a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#auth2" aria-expanded="false" aria-controls="auth">
+        <i class="menu-icon mdi mdi-square-inc-cash"></i>
+        <span class="menu-title">Income & Expenditure</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth2">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'create-expenditure' %}"> Add Expenses </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'expenses-list' %}"> Consumable Expenses </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'general-expenditure' %}"> General Expenditure </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'general-income' %}"> General Income </a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#auth3" aria-expanded="false" aria-controls="auth">
+        <i class="menu-icon mdi mdi-square-inc-cash"></i>
+        <span class="menu-title">Sells</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth3">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'create-sells' %}"> Create Sells </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'sells-record' %}"> Sells Record </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'add-sells-item' %}"> Add Sells Item </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'sells-item-list' %}"> Sells Item List </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
